@@ -1,4 +1,8 @@
-def legacy_data(letter, hash)
+def legacy_data(letters, hash)
+  letter.each do | l |
+    letter = l
+  end
+
   hash.each do |key, value|
     if hash[key].index(letter) != nil
       return key
@@ -7,4 +11,4 @@ def legacy_data(letter, hash)
 
 end
 
-legacy_data("A", { 1  => ["A", "E", "I"]})
+legacy_data(["A"], { 1  => ["A", "E", "I"]})
